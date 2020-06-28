@@ -63,6 +63,7 @@ int SerialHandler::sendCmdAndWaitForResp(char* cmd, string resp, int dataSize, i
     setReceiveParam(resp, dataSize);
     sendCmd(cmd);
     while (!gotExpectedData || !gotExpectedOutput){
+        Watchdog::get_instance().kick();
         timeout -= 1;
         wait_us(1000);
         if (timeout == 0) {

@@ -3,7 +3,7 @@
 
 #define RECEIVED_DATA_BUFFER_SIZE 1500
 #define RECEIVED_OUTPUT_BUFFER_SIZE 150
-#define RECEIVED_RAW_DATA_BUFFER_SIZE 1500
+#define RECEIVED_RAW_DATA_BUFFER_SIZE 2000
 #include "mbed.h"
 #include "events/EventQueue.h"
 #include <string>
